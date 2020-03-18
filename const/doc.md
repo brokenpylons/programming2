@@ -109,7 +109,7 @@ int main() {
  c.f(); // Pokliče se metoda brez const
  
  const C c2;
- c2.f(); // Pokliče se metoda z const
+ c2.f(); // Pokliče se metoda s const
 }
 ```
  
