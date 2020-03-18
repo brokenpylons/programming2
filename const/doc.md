@@ -11,6 +11,11 @@ Na tak način določila ```const``` ne moremo pozabiti.
 const int value = 1;
 ```
 
+```cpp
+const int n = 10;
+int array[n];
+```
+
 ## Argumenti funkcij
 
 ```cpp
@@ -53,12 +58,61 @@ C::C(const int value) : value(value) { // Inicializiramo jih lahko samo v inicia
 ```
 
 Uporaba konstantnih instančnih spremenljivk pomeni:
- * izbrišejo se privzeti dodelitveni operatorji ([link](https://en.cppreference.com/w/cpp/language/copy_assignment), [link](https://en.cppreference.com/w/cpp/language/move_assignment)) ‡
- * premikalni (move) konstruktor mora kopirati instančne spremenljivke, ki imajo ```const```, torej lahko proži izjemo. Posledično ga določeni tipi, npr. ```str::vector``` ne morejo več uporabiti ([link](https://en.cppreference.com/w/cpp/language/move_constructor)) (vpliva na performanco) ‡
+ * izbriše se privzeti dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/copy_assignment#Deleted_implicitly-declared_copy_assignment_operator) in privzeti premikalni (move) dodelitveni operator , [link](https://en.cppreference.com/w/cpp/language/move_assignment#Deleted_implicitly-declared_move_assignment_operator))‡
+ * privzeti premikalni (move) konstruktor mora kopirati instančne spremenljivke z določilom ```const```. Kopirni konstruktorji lahko prožijo izjeme, torej jo lahko sedaj tudi premikalni konstruktor. Posledično ga določeni tipi, npr. ```str::vector``` ne morejo več uporabiti ([link](https://en.cppreference.com/w/cpp/language/move_constructor#Implicitly-defined_move_constructor)) (vpliva na performanco)‡
 
 Zaradi zgoraj omenjenih pomankljivosi dobro premislimo preden jih uporabimo!
  
  ## Metode
  
+```cpp
+class C {
+  std::string f(const std::string &s, int i);
+};
 
+C::f(const std::string &s, const int i) {
+  ...
+}
+```
+Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenjljivk).
+ 
+```cpp
+class C {
+ int value;
+ 
+ void set_value(int value);
+ int get_value() const; // !
+};
+ 
+void C::set_value(const int value) {
+  this->value = value; // Spremeni stanje objekta, ne more biti const
+}
+ 
+int C::get_value() const {
+  return value; // Ne spremeni stanja, torej const
+}
+```
+ 
+Pri metodah je ```const``` del signature, torej ga je potrebno napisati pri deklaraciji in definiciji. Prav tako se lahko metode z in brez ```const``` prekrivajo.
+ 
+```cpp
+class C {
+  void f();
+  void f() const;
+};
+ 
+void C::f() {}
+void C::f() const {}
+ 
+int main() {
+ C c1;
+ c.f(); // Pokliče se metoda brez const
+ 
+ const C c2;
+ c2.f(); // Pokliče se metoda z const
+}
+```
+ 
+To je uporabno pri operatorjih za dostop do polj ([link](https://en.cppreference.com/w/cpp/language/operators#Array_subscript_operator))‡
 
+ ‡: Samo informativno (morda ne boste razumeli)
