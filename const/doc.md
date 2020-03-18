@@ -74,7 +74,7 @@ C::f(const std::string &s, const int i) {
   ...
 }
 ```
-Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenjljivk).
+Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenljivk).
  
 ```cpp
 class C {
