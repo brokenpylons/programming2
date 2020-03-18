@@ -85,6 +85,7 @@ int main() {
  
 ```cpp
 class C {
+public:
   std::string f(const std::string &s, int i);
 };
 
@@ -96,10 +97,11 @@ Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno 
  
 ```cpp
 class C {
- int value;
- 
- void set_value(int value);
- int get_value() const; // !
+public: 
+  void set_value(int value);
+  int get_value() const; // !
+private:
+  int value;
 };
  
 void C::set_value(const int value) {
@@ -115,6 +117,7 @@ Pri metodah je ```const``` del signature, torej ga je potrebno napisati pri dekl
  
 ```cpp
 class C {
+public:
   void f();
   void f() const;
 };
