@@ -57,7 +57,7 @@ C::C(const int value) : value(value) { // Inicializiramo jih lahko samo v inicia
 }
 ```
 
-Uporaba konstantnih instančnih spremenljivk pomeni:
+Uporaba ```const``` instančnih spremenljivk pomeni:
  * izbriše se privzeti dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/copy_assignment#Deleted_implicitly-declared_copy_assignment_operator) in privzeti premikalni (move) dodelitveni operator , [link](https://en.cppreference.com/w/cpp/language/move_assignment#Deleted_implicitly-declared_move_assignment_operator))‡
  * privzeti premikalni (move) konstruktor mora kopirati instančne spremenljivke z določilom ```const```. Kopirni konstruktorji lahko prožijo izjeme, torej jo lahko sedaj tudi premikalni konstruktor. Posledično ga določeni tipi, npr. ```str::vector``` ne morejo več uporabiti ([link](https://en.cppreference.com/w/cpp/language/move_constructor#Implicitly-defined_move_constructor)) (vpliva na performanco)‡
 
