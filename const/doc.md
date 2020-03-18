@@ -59,7 +59,7 @@ C::C(const int value) : value(value) { // Inicializiramo jih lahko samo v inicia
 }
 ```
 
-Uporaba ```const``` instančni spremenljivk povzroči, da se izbriše:
+Uporaba ```const``` instančnih spremenljivk povzroči, da se izbriše:
  * implicitno definiran privzeti konstruktor
  * implicitno definiran dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/copy_assignment#Deleted_implicitly-declared_copy_assignment_operator))‡
  * implicitno definiran premikalni dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/move_assignment#Deleted_implicitly-declared_move_assignment_operator))‡
