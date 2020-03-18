@@ -48,12 +48,36 @@ int f(const int arg) {
 
 ```cpp
 class C {
-  const int value;
+public:  
   C(int value);
+private:
+  const int value;
 };
 
 C::C(const int value) : value(value) { // Inicializiramo jih lahko samo v inicializacijski listi
   
+}
+```
+
+Uporaba ```const``` instančni spremenljivk povzroči, da se izbriše:
+ * implicitno definiran privzeti konstruktor
+ * implicitno definiran dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/copy_assignment#Deleted_implicitly-declared_copy_assignment_operator))‡
+ * implicitno definiran premikalni dodelitveni operator ([link](https://en.cppreference.com/w/cpp/language/move_assignment#Deleted_implicitly-declared_move_assignment_operator))‡
+
+```
+class C {
+public:
+  C(int value);
+private:
+  const int value;
+};
+
+C::C(const int value) : value(value) {}
+
+int main() {
+  C c1(1);
+  C c2(2);
+  c1 = c2; // Ne gre!
 }
 ```
  
