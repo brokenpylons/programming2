@@ -136,4 +136,4 @@ int main() {
  
 To je uporabno pri operatorjih za dostop do polj ([link](https://en.cppreference.com/w/cpp/language/operators#Array_subscript_operator))‡
 
- ‡: Tega še niste oz. ne boste imeli na predavanjih
+ ‡: Dodatne informacije
