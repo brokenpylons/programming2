@@ -76,7 +76,15 @@ Count::Count() {
 
 Count::~Count() {
   count--;
-}       
+}  
+
+int main() {
+  std::cout << Count::get_count() << std::endl; // Vedno pokličemo z imenom razreda in ne instance
+  Count c1;
+  std::cout << Count::get_count() << std::endl;
+  Count c2;
+  std::cout << Count::get_count() << std::endl;
+}
 ```
 
 ```cpp
@@ -90,7 +98,7 @@ int Math::max(const int x, const int y) { // To bi lahko bila tudi funkcija
 }
 
 int main() {
-  std::cout << Math::max(1, 2) << std::endl; // Vedno pokličemo z imenom razreda in ne instance
+  std::cout << Math::max(1, 2) << std::endl; 
 }
 ```
 
