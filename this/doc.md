@@ -59,6 +59,3 @@ int main() {
   set_r(&color, 255);
 }
 ```
-
-
-
