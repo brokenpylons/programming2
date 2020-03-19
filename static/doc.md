@@ -2,9 +2,9 @@
 
 Originalno je beseda pomenila, da je spremenljivka alocirana statično ([link](https://en.wikipedia.org/wiki/Static_variable)). 
 Torej je za njo že v naprej pripravljen prostor v podatkovnem segmentu (ni na skladu) ([link](https://en.wikipedia.org/wiki/Data_segment)).
-Živlenska doba take spremenljivke je celoten čas zagona programa.‡
+Živlenska doba take spremenljivke je celoten čas zagona programa. ‡
 
-Vse globalne spremenljivke so alocirane statično, za lokalne pa to dosežemo tako, da jih označimo s ```static```.‡
+Vse globalne spremenljivke so alocirane statično, za lokalne pa to dosežemo tako, da jih označimo s ```static```. ‡
 
 ```cpp
 int f(const int n) {
@@ -52,7 +52,7 @@ Takrat, ko potrebujemo globalno spremenljivko ali funkcijo in
   * Funkcija potrebuje dostop do razrednih spremenljivk
   
 Razredne spremenljivke z javnim dostopom (```public```), so praktično enake globalnih spremenljivkam, torej zanje veljajo enake pomanjkljivosti, zato se jim poskušamo izogibati.
-Če morajo biti vidne navzven je dobro, da so konstantne (```const```) oz. jih naredimo privatne in ne implementiramo setterja.
+Če želimo, da so vidne navzven je dobro, da so konstantne (```const```) oz. jih naredimo privatne in ne implementiramo setterja.
 
 ```cpp
 class Count {
