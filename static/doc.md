@@ -56,11 +56,16 @@ class Count {
 public:
   Count();
   ~Count();
+  static int get_count();
 private:
   static int count;
 };
 
 int Count::count = 0; // Inicializiramo zunaj razreda
+
+int Count::get_count() {
+  return count; // Potrebujemo dostop, do razredne spremenljivke
+}
 
 Count::Count() {
   count++;
@@ -70,10 +75,20 @@ Count::~Count() {
   count--;
 }
 
-int main() { // Count::count == 0
-  Count c1;  // Count::count == 1
-  Count c2;  // Count::count == 2
-}            // Count::count == 0
+void print_count() {
+  std::cout << Count::get_count() << std::endl;
+}
+
+int main() {
+  print_count(); // 0
+  {
+    Count c1;
+    print_count(); // 1
+    Count c2;
+    print_count(); // 2
+  }
+  print_count(); // 0
+}           
 ```
 
 ```cpp
@@ -82,7 +97,7 @@ public:
   static int max(int, int);
 };
 
-int Math::max(const int x, const int y) {
+int Math::max(const int x, const int y) { // To bi lahko bila tudi funkcija
   return std::max(x, y);
 }
 
