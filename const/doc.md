@@ -11,6 +11,9 @@ Na tak način določila ```const``` ne moremo pozabiti.
 const int value = 1;
 ```
 
+Številčne spremenljivke s ```const``` lahko uporabimo za določitev velikosti polja (namesto ```#define```).
+To je posebna izjema v standardu ([link](https://en.cppreference.com/w/cpp/language/constant_expression#Usable_in_constant_expressions)).
+
 ```cpp
 const int n = 10;
 int array[n];
