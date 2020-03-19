@@ -50,6 +50,9 @@ Takrat, ko potrebujemo globalno spremenljivko ali funkcijo in
   * ta logično pripada razredu
   * želimo omejti dostop (npr. s ```private```)
   * Funkcija potrebuje dostop do razrednih spremenljivk
+  
+Razredne spremenljivke z javnim dostopom (```public```), so praktično enake globalnih spremenljivkam, torej zanje veljajo enake pomanjkljivosti, zato se jim poskušamo izogibati.
+Če morajo biti vidne navzven je dobro, da so konstantne (```const```) oz. jih naredimo privatne in ne implementiramo setterja.
 
 ```cpp
 class Count {
