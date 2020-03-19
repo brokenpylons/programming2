@@ -67,7 +67,7 @@ private:
 int Count::count = 0; // Inicializiramo zunaj razreda
 
 int Count::get_count() {
-  return count; // Potrebujemo dostop, do razredne spremenljivke
+  return count; // Potrebujemo dostop, do razredne spremenljivke, torej static
 }
 
 Count::Count() {
