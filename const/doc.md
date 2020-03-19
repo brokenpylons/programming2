@@ -40,7 +40,7 @@ const int *f() { ... }
 Za osnovne tipe ```const``` v deklaraciji nima nobenega učinka. Dobra praksa je, da ga uporabljamo izključno v definicijah ([link](https://stackoverflow.com/questions/46292490/is-it-better-to-remove-const-in-front-of-primitive-types-used-as-function-pa/46292715))
 
 ```cpp
-int f(int arg);
+int f(int);
 
 int f(const int arg) {
   ...
@@ -52,7 +52,7 @@ int f(const int arg) {
 ```cpp
 class C {
 public:  
-  C(int value);
+  C(int);
 private:
   const int value;
 };
@@ -81,7 +81,7 @@ int main() {
 ```cpp
 class C {
 public:
-  C(int value);
+  C(int);
 private:
   const int value;
 };
@@ -100,7 +100,7 @@ int main() {
 ```cpp
 class C {
 public:
-  std::string f(const std::string &s, int i);
+  std::string f(const std::string &, int);
 };
 
 C::f(const std::string &s, const int i) {
@@ -112,7 +112,7 @@ Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno 
 ```cpp
 class C {
 public: 
-  void set_value(int value);
+  void set_value(int);
   int get_value() const; // !
 private:
   int value;
