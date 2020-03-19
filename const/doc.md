@@ -139,7 +139,7 @@ int main() {
  
 To je uporabno pri operatorjih za dostop do polj ([link](https://en.cppreference.com/w/cpp/language/operators#Array_subscript_operator))‡
 
-# Poglejte še
+## Poglejte še
 * [const correctness FAQ](https://isocpp.org/wiki/faq/const-correctness#overview-const)
 * [cppreference](https://en.cppreference.com/w/cpp/keyword/const)
 * [constexpr](https://en.cppreference.com/w/cpp/language/constexpr)‡
