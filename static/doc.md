@@ -49,6 +49,7 @@ Znotraj razreda lahko dostopamo do njih enako, kot do instančnih spremenljivk i
 Takrat, ko potrebujemo globalno spremenljivko ali funkcijo in
   * ta logično pripada razredu
   * želimo omejti dostop (npr. s ```private```)
+  * Funkcija potrebuje dostop do razrednih spremenljivk
 
 ```cpp
 class Count {
