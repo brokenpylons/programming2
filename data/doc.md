@@ -6,7 +6,7 @@ struct Color {
 }
 ```
 
-# Vzorec 1
+## Vzorec 1
 
 ```cpp
 class Color {
@@ -35,7 +35,7 @@ int get_b() const {
 }
 ```
 
-# Vzorec 2
+## Vzorec 2
 
 ```cpp
 class Color {
@@ -79,7 +79,7 @@ void set_b(const int b) {
 }
 ```
 
-# Vzorec 3 
+## Vzorec 3 
 
 ```cpp
 class Color {
