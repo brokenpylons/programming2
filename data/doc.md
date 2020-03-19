@@ -3,7 +3,7 @@
 ```cpp
 struct Color {
   int r, g, b;
-}
+};
 ```
 
 ## Vzorec 1
@@ -17,20 +17,20 @@ public:
   int get_b() const;
 private:
   int r, g, b;
-}
+};
 
-Color(const int r, const int g , const int b)
+Color::Color(const int r, const int g , const int b)
   : r(r), g(g), b(b) {}
   
-int get_r() const {
+int Color::get_r() const {
   return r;
 }
 
-int get_g() const {
+int Color::get_g() const {
   return g;
 }
 
-int get_b() const {
+int Color::get_b() const {
   return b;
 }
 ```
@@ -51,30 +51,30 @@ private:
   int r, g, b;
 }
 
-Color(const int r, const int g , const int b)
+Color::Color(const int r, const int g , const int b)
   : r(r), g(g), b(b) {}
   
-int get_r() const {
+int Color::get_r() const {
   return r;
 }
 
-int get_g() const {
+int Color::get_g() const {
   return g;
 }
 
-int get_b() const {
+int Color::get_b() const {
   return b;
 }
 
-void set_r(const int r) {
+void Color::set_r(const int r) {
   this->r = r;
 }
 
-void set_g(const int g) {
+void Color::set_g(const int g) {
   this->g = g;
 }
 
-void set_b(const int b) {
+void Color::set_b(const int b) {
   this->b = b;
 }
 ```
@@ -93,32 +93,32 @@ public:
   Color set_b(int);
 private:
   int r, g, b;
-}
+};
 
-Color(const int r, const int g , const int b)
+Color::Color(const int r, const int g , const int b)
   : r(r), g(g), b(b) {}
   
-int get_r() const {
+int Color::get_r() const {
   return r;
 }
 
-int get_g() const {
+int Color::get_g() const {
   return g;
 }
 
-int get_b() const {
+int Color::get_b() const {
   return b;
 }
 
-Color set_r(const int r) {
+Color Color::set_r(const int r) {
   return Color(r, this->g, this->b);
 }
 
-void set_g(const int g) {
+Color Color::set_g(const int g) {
   return Color(this->r, g, this->b);
 }
 
-void set_b(const int b) {
+Color Color::set_b(const int b) {
   return Color(this->r, this->g, b);
 }
 ```
