@@ -1,5 +1,8 @@
 # Kazalec ```this```
 
+C++ je nastal kot predprocesor za C.
+Torej se je razred prevedel v nekaj takega (```this``` je rezerviran, zato je namesto tega self):
+
 ```cpp
 // class Color {
 
@@ -51,9 +54,9 @@ void set_b(Data *const self, const int b) {
 }
 
 int main() {
-    data color = constructor(0, 0, 0);
-    get_r(&color);
-    set_r(&color, 255);
+  data color = constructor(0, 0, 0);
+  get_r(&color);
+  set_r(&color, 255);
 }
 ```
 
