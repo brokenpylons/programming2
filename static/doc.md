@@ -76,22 +76,7 @@ Count::Count() {
 
 Count::~Count() {
   count--;
-}
-
-void print_count() {
-  std::cout << Count::get_count() << std::endl;
-}
-
-int main() {
-  print_count(); // 0
-  {
-    Count c1;
-    print_count(); // 1
-    Count c2;
-    print_count(); // 2
-  }
-  print_count(); // 0
-}           
+}       
 ```
 
 ```cpp
