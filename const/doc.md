@@ -7,7 +7,7 @@ Na tak način določila ```const``` ne moremo pozabiti.
 
 ## Lokalne in globalne spremenljivke
 
-Vse spremenljivke, ki se ne spremenijo označimo s const ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rconst-immutable)).
+Vse spremenljivke, ki se ne spremenijo tekom programa označimo s const ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rconst-immutable)).
 
 ```cpp
 const int value = 1;
@@ -121,7 +121,7 @@ C::f(const std::string &s, const int i) {
   ...
 }
 ```
-Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenljivk).
+Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenljivk) ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#con2-by-default-make-member-functions-const)).
  
 ```cpp
 class C {
