@@ -34,9 +34,9 @@ Za vračalni tip ne uporabljamo ```const```, razen če je ta kazalec ali referen
 ```cpp
 int f() { ... }
 
-const int &f() { ... }
+const int &g() { ... }
 
-const int *f() { ... }
+const int *h() { ... }
 ```
 
 Za tipe argumentov ```const``` v deklaraciji nima nobenega učinka, razen če so kazalci ali reference. Dobra praksa je, da ga uporabljamo izključno v definicijah ([link](https://stackoverflow.com/questions/46292490/is-it-better-to-remove-const-in-front-of-primitive-types-used-as-function-pa/46292715)).
@@ -50,7 +50,13 @@ int f(const int arg) {
 
 int g(const std::string &);
 
-int g(const std::string &) {
+int g(const std::string &arg) {
+  ...
+}
+
+int h(const char *);
+
+int h(const char *arg) {
   ...
 }
 ```
