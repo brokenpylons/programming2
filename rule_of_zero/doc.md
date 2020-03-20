@@ -29,7 +29,7 @@ int main() {
 }
 ````
 
-# CLion Warning
+## CLion Warning
 
 Če želimo, da nas na to napako Clion opozori, pod:
 
