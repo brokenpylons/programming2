@@ -25,7 +25,7 @@ void set_b(Data *, int);
 
 // }
 
-Data constructor(const int r, const int g, const int b) {
+Data constructor(int r, int g, int b) {
   return Data{r, g, b};
 }
 
