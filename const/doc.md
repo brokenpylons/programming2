@@ -56,7 +56,7 @@ int g(const std::string &arg) {
 
 int h(const char *);
 
-int h(const char *arg) {
+int h(const char *const arg) {
   ...
 }
 ```
