@@ -31,7 +31,7 @@ int main() {
 
 ## CLion Warning
 
-Če želimo, da nas na to napako Clion opozori, pod:
+Če želimo, da nas na to napako CLion opozori, pod:
 
 ```
 File > Settings > Editor > Inspections > General > Clang-Tidy > Options
