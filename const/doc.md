@@ -11,6 +11,11 @@ Vse spremenljivke, ki se ne spremenijo tekom programa označimo s const ([link](
 
 ```cpp
 const int value = 1;
+
+void f() {
+  const int value = 1;
+  ...
+}
 ```
 
 Številčne spremenljivke s ```const``` lahko uporabimo za določitev velikosti polja (namesto ```#define```).
