@@ -37,12 +37,18 @@ const int &f() { ... }
 const int *f() { ... }
 ```
 
-Za osnovne tipe ```const``` v deklaraciji nima nobenega učinka. Dobra praksa je, da ga uporabljamo izključno v definicijah ([link](https://stackoverflow.com/questions/46292490/is-it-better-to-remove-const-in-front-of-primitive-types-used-as-function-pa/46292715))
+Za tipe argumentov ```const``` v deklaraciji nima nobenega učinka, razen če so kazalci ali reference. Dobra praksa je, da ga uporabljamo izključno v definicijah ([link](https://stackoverflow.com/questions/46292490/is-it-better-to-remove-const-in-front-of-primitive-types-used-as-function-pa/46292715))
 
 ```cpp
 int f(int);
 
 int f(const int arg) {
+  ...
+}
+
+int g(const std::string &);
+
+int g(const std::string &) {
   ...
 }
 ```
