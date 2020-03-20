@@ -52,7 +52,7 @@ Takrat, ko potrebujemo globalno spremenljivko ali funkcijo in
   * funkcija potrebuje dostop do razrednih spremenljivk
   
 Razredne spremenljivke z javnim dostopom (```public```), so praktično enake globalnih spremenljivkam, torej zanje veljajo enake pomanjkljivosti, zato se jim poskušamo izogibati.
-Če želimo, da so vidne navzven je dobro, da so konstantne (```const```) ((link)[https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#r6-avoid-non-const-global-variables]) oz. jih naredimo privatne in ne implementiramo setterja.
+Če želimo, da so vidne navzven je dobro, da so konstantne (```const```) ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#r6-avoid-non-const-global-variables)) oz. jih naredimo privatne in ne implementiramo setterja.
 
 ```cpp
 class Count {
