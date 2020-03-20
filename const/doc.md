@@ -126,13 +126,14 @@ C::f(const std::string &s, const int i) {
   ...
 }
 ```
-Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenljivk) ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#con2-by-default-make-member-functions-const)).
+Vse kar velja za funkcije velja tudi za metode, poleg tega pa imamo še posebno obliko ```const``` metod, ki ne smejo spremeniti stanja objekta (instančnih spremenljivk) ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#con2-by-default-make-member-functions-const)). Takšne metode lahko kličejo samo druge ```const``` metode.
  
 ```cpp
 class C {
-public: 
+public:
   void set_value(int);
   int get_value() const; // !
+  ...
 private:
   int value;
 };
@@ -143,6 +144,14 @@ void C::set_value(const int value) {
  
 int C::get_value() const {
   return value; // Ne spremeni stanja, torej const
+}
+
+...
+
+int main() {
+  const C c;
+  c.get_value();
+  c.set_value(1); // Ne gre!
 }
 ```
  
