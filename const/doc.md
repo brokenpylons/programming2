@@ -7,6 +7,8 @@ Na tak način določila ```const``` ne moremo pozabiti.
 
 ## Lokalne in globalne spremenljivke
 
+Vse spremenljivke, ki se ne spremenijo označimo z const ([link](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rconst-immutable)).
+
 ```cpp
 const int value = 1;
 ```
