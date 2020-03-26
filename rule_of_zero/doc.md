@@ -23,9 +23,9 @@ int main() {
   Narobe n2(n1); // Zastarelo
   Narobe n3;
   n3 = n1; // Zastarelo
-  Narobe n4(Narobe()); // Kopija namesto premika
+  Narobe n4(Narobe{}); // Kopija namesto premika
   Narobe n5;
-  n5 = Narobe() // Kopija namesto premika
+  n5 = Narobe(); // Kopija namesto premika
 }
 ````
 
